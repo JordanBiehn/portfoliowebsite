@@ -1,241 +1,354 @@
-/*
-Colors used:
-Primary Color (Black): #000000
-Secondary Color (White): #ffffff
-*/
+/*-------------------------------------------Start Section---------------------------------------------*/
 
-body {
-    background-color: #ffffff;
-    font-family: 'OpenSans', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.6;
+/*setting the default width of an element to include the padding and the border via the box-sizing property and border-box value*/
+* {
+  box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    line-height: 1.4;
+/*--------------------------------------------End Section---------------------------------------------*/
+/*-------------------------------------------Start Section---------------------------------------------*/
+/*default body settings*/
+
+body {
+  background-color: #ffffff;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.4;
 }
 
 h1 {
-    font-size: 2.75em;
-    font-weight: 700;
+  font-size: 2.75em;
+  font-weight: 700;
 }
 
 h2 {
-    font-size: 2.25em;
-    font-weight: 700;
+  font-size: 2.25em;
+  font-weight: 700;
 }
 
 h3 {
-    font-size: 1.75em;
-    font-weight: 400;
+  font-size: 1.75em;
+  font-weight: 400;
+  margin-top: -8px;
 }
+
+#about-page h3 { margin-top: 0;}
 
 h4 {
-    font-size: 1.35em;
-    font-weight: 400;
+  font-size: 1.35em;
+  font-weight: 400;
 }
 
+
+/*setting images to full-width*/
 img {
-    width: 100%;
+  width: 100%;
 }
 
+.about_headshot {
+    width: 55%; float: right; padding-left: 20px;
+}
+
+/*change the default link color to your primary color (copied from your comments at the top of the document)*/
 a {
-    color: #000000;
-    text-decoration: none;
+  color: #000000;
+  text-decoration: none; /* No underlining */
+}
+a:hover {
+  color: #bbbbbb;
+  text-decoration: none; /* Underlining when hovering over a link */
 }
 
-a:visited {
-    color: #999999;
-}
-a:hover,
-a:focus {
+/*style the current nav item green*/
+.active a {
     color: #A3A3A3;
     text-decoration: underline;
 }
-a:active {
-    color: #ffffff;
+
+a:active { /* selected link */
+  color: #bbbbbb;
 }
 
+/*Pseudo classes for Accessibility for Across the Web*/
+a:hover,
+a:focus {
+  color: #bbbbbb;
+  text-decoration: none;
+}
+
+
+/*CSS code for the button class*/
 .button {
-    display: inline-block;
-    background-color: #000000;
-    color: #ffffff;
-    font-weight: 400;
-    padding: 10px;
-    border-radius: 3px;
-    border-bottom: 2px solid #ffffff;
-    transition: 0.2s opacity;
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #ffffff;
+  transition: 0.8s opacity;
 }
 
 .button:hover {
-    opacity: 0.8;
-    text-decoration: none;
+  opacity: 0.8;
+/*
+  color: #ffffff;
+  background-color: green;
+  text-decoration: none;
+*/
 }
 
+.button:active {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+
+/*button rules for the mailto button*/
 .button.contact {
-    background-color: transparent;
-    color: #000000;
-    text-transform: uppercase;
-    border: 2px solid #000000;
-}
-.button.contact:hover {
-    background-color: #ffffff;
-}
-header {
-    background-color: #e5e5e5;
-    text-align: center;
-    padding: 10px 0;
-    display: inline-block;
-    position: fixed;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5) ;
-    width: 100%;
+  background-color: transparent;
+  color: #000000;
+  text-transform: uppercase;
+  border: 2px solid #000000;
+  transition: 0.8s opacity;
 }
 
+/*button class hover and active state*/
+
+.button.contact:hover {
+  opacity: 0.8;
+  background-color: green;
+  color: #444444;
+}
+
+.button.contact:active {
+  opacity: 0.8;
+  color: #444444;
+}
+
+/*--------------------------------------------End Section---------------------------------------------*/
+/*-------------------------------------------Start Section---------------------------------------------*/
+/*stye the page sections*/
+
+/*style the <header> element*/
+header {
+  background-color: #e5e5e5;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  box-shadow: 0px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+/*style the logo*/
+header .logo {
+  max-width: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*Navigation Styling*/
+nav {
+  display: inline-block;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000000;
+}
+
+#hero {
+  background-color: #e5e5e5;
+  padding: 40px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+#hero span {
+  display: block;
+}
+
+#contact {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+/*Style the social icons*/
+.social {
+  list-style-type: none;
+  padding: 0;
+  margin-left: -10px;
+}
+
+.social li {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.social img {
+  height: 32px;
+  width: 32px;
+}
+/*--------------------------------------------End Section---------------------------------------------*/
+/*-------------------------------------------Start Section---------------------------------------------*/
 /* Layout styling */
 
 .container {
-    padding: 0 15px;
+  padding: 0 15px;
 }
-* {
-    box-sizing: border-box;
-}
+
 .row {
-    margin: 25px 0; 
-}
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-#hero h1 {
-    text-align: center;
-}
-.logo {
-    max-width: 250px;
-}
-nav > ul {
-    list-style-type: none;
-    padding: 0;
-}
-nav > ul > li {
-    display: inline-block;
-}
-nav > ul > li > a {
-    padding: 0 15px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #000000
-}
-nav > ul > li > a:visited {
-    padding: 0 15px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #000000
-}
-#hero {
-    background-color: #ffffff;
-    padding: 20px 0;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-}
-#hero span {
-    display: block;
-}
-main {
-    padding-top: 133px;
-}
-[class*="col-"] {
-    float: left;
-    padding: 24px;
-}
-.button {
-    display: inline-block;
-    background-color: #000000;
-    color: white;
-    font-weight: 400;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    border-bottom: 2px solid #000000;
-    transition-duration: 0.2s;
-    transition-property: opacity;
-}
-.button:hover {
-    opacity: 0.8;
+  margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
 
-@media only screen and (min-width: 640px) {
-header 
-{ text-align: unset;
-padding: 20px 0 13px;
-}
-nav { 
-    width: auto;
-    float: right;
-    margin-top: 4px;
-}
-.col-md-6 {
-    width: 50%;
-}
-}
+#work .row { padding-bottom: 20px; }
 
-@media only screen and (min-width: 1024px)
-.container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.col-lg-7 {
-    width: 60%;
-}
-.col-lg-5 {
-    width: 40%;
-}
-.col-lg-7 {
-    width: 60%;
-    float: left;
-    padding-bottom: 40px;
-}
-.col-lg-8 {
-    width: 40%;
-    float: right;
-}
-
-@media only screen and (min-width: 1440px) {
-
-}
-
-@media only screen and (min-width: 1920px) {
-
+/*--------------------------------------------End Section---------------------------------------------*/
+/*-------------------------------------------Start Section---------------------------------------------*/
+/*SVG anamation*/
+.svg-animation {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 @keyframes color-change {
-    0% {fill: #edc655;}
-    50% {fill: #fcffad;}
-    100% {fill: #f76414;}
-  }
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+
 .sun {
-    animation: 4s color-change infinite alternate linear;
-  }
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
 
-  @keyframes cloud-move {
-    from {transform: translate(0,50px);}
-    to {transform: translate(200px,50px);}
-  }
+/*single line...
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+*/
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
 .cloud-front {
-    animation: 30s cloud-move infinite alternate linear;
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+/*single line...
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+*/
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+/*--------------------------------------------End Section---------------------------------------------*/
+/*-------------------------------------------Start Section---------------------------------------------*/
+/*Media Queries*/
+
+/*clear page flow*/
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*float all columns left*/
+[class*="col-"] {
+  padding: 10px;
+}
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  body {
+    font-size: 18px;
+  }
+    
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
   }
 
-  @keyframes cloud-move-reverse {
-    from {transform: translate(446px,48px);}
-    to {transform: translate(100px, 48px);}
+  nav {
+    width: auto;
+    float: right;
   }
-.cloud-back {
-    animation: 34s cloud-move-reverse infinite alternate linear;
+    
+  .col-md-6 {
+    width: 50%;
+    float: left;
+    padding-bottom: 40px;
   }
-  
+    
+}
+
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .col-lg-7 {
+    width: 60%;
+  }
+
+  .col-lg-5 {
+    width: 40%;
+  }
+    
+  .col-lg-7 {
+    width: 60%;
+    float: left;
+    padding-bottom: 40px;
+  }
+  .col-lg-8 {
+    width: 40%;
+    float: right;
+  }
+    
+   #about-page .col-md-6 {
+     width: 100%;
+  }
+}
