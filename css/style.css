@@ -52,7 +52,8 @@ img {
 }
 
 .about_headshot {
-    width: 55%; float: right; padding-left: 20px;
+    width: 100%;
+    padding-bottom: 4px;
 }
 
 /*change the default link color to your primary color (copied from your comments at the top of the document)*/
@@ -67,12 +68,12 @@ a:hover {
 
 /*style the current nav item green*/
 .active a {
-    color: #A3A3A3;
+    color: #000000;
     text-decoration: underline;
 }
 
 a:active { /* selected link */
-  color: #bbbbbb;
+  color: #000000;
 }
 
 /*Pseudo classes for Accessibility for Across the Web*/
@@ -124,13 +125,13 @@ a:focus {
 
 .button.contact:hover {
   opacity: 0.8;
-  background-color: green;
-  color: #444444;
+  background-color: #4c4c4c;
+  color: #ffffff;
 }
 
 .button.contact:active {
   opacity: 0.8;
-  color: #444444;
+  color: #000000;
 }
 
 /*--------------------------------------------End Section---------------------------------------------*/
@@ -317,6 +318,12 @@ Medium devices (640px and larger)
     float: left;
     padding-bottom: 40px;
   }
+
+  .about_headshot {
+    width: 100%;
+    margin: auto;
+    padding-bottom: 4px;
+}
     
 }
 
@@ -351,4 +358,10 @@ Large devices (1024px or larger)
    #about-page .col-md-6 {
      width: 100%;
   }
+
+  .about_headshot {
+    width: 55%;
+    float: right;
+    padding-left: 20px;
+}
 }
