@@ -1,5 +1,4 @@
 <script>
   alert("Hello");
 </script>
-
-console.log("Hello world") ;
+console.log("Hello world");
