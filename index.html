@@ -13,6 +13,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/2bc4a743d8.js" crossorigin="anonymous"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,100&family=Roboto:wght@100&display=swap"
     rel="stylesheet">
@@ -25,16 +26,19 @@
   <header>
     <!-- For the navigation -->
     <div class="container">
-      <a href="index.html">
-        <img src="img/JBnewlogo-02.svg" class="logo" alt="Logo">
-      </a>
-      <nav>
-        <ul class="navigation">
-          <li class="active"><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="navtoggle" id="myNavtoggle">
+        <a href="index.html">
+          <img src="img/JBnewlogo-02.svg" class="logo" alt="Logo">
+        </a>
+        <nav>
+          <ul class="navigation">
+            <li class="active"><a href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -1624,6 +1628,8 @@
     </div>
   </footer>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
 
 </body>
