@@ -141,31 +141,44 @@ a:focus {
 /*style the <header> element*/
 header {
   background-color: #e5e5e5;
-  text-align: center;
-  padding: 10px 0;
+  padding: 10px 0 4px;
   position: relative;
   box-shadow: 0px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 /*style the logo*/
 header .logo {
-  max-width: 80px;
+  max-width: 150px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 /*Navigation Styling*/
-nav {
-  display: inline-block;
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
 }
 
 nav > ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav > ul > li {
-  display: inline-block;
+  margin: 0;
 }
 
 nav > ul > li > a {
@@ -173,6 +186,19 @@ nav > ul > li > a {
   text-transform: uppercase;
   font-weight: 700;
   color: #000000;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
 }
 
 #hero {
@@ -298,7 +324,7 @@ nav > ul > li > a {
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 641px) {
   body {
     font-size: 18px;
   }
@@ -308,9 +334,28 @@ Medium devices (640px and larger)
     padding: 20px 0 13px;
   }
 
+  header .logo {
+    max-width: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   nav {
     width: auto;
     float: right;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+    margin: 1em 0;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
   }
     
   .col-md-6 {
