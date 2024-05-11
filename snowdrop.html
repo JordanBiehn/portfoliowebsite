@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/2bc4a743d8.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,6 +23,7 @@
     <header>
         <!-- For the navigation -->
         <div class="container">
+            <div class="navtoggle" id="myNavtoggle">
             <a href="index.html">
                 <img src="img/JBnewlogo-02.svg" class="logo" alt="Logo">
             </a>
@@ -30,8 +32,10 @@
                     <li><a href="index.html">Work</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
                 </ul>
             </nav>
+            </div>
         </div>
     </header>
     <main>
@@ -105,7 +109,10 @@
             </div>
         </div>
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
+
 </body>
 <!-- For the footer  -->
 <footer id="contact">
