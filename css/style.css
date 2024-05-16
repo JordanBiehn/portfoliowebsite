@@ -171,6 +171,7 @@ header .logo {
   position: absolute;
   right: 0;
   top: 2px;
+  padding-top: 36px;
   font-size: 20px;
   padding-right: 0;
 }
@@ -179,6 +180,7 @@ nav > ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  align-items: center;
 }
 
 nav > ul > li > a {
@@ -186,6 +188,7 @@ nav > ul > li > a {
   text-transform: uppercase;
   font-weight: 700;
   color: #000000;
+  align-items: center;
 }
 
 .navtoggle.responsive nav {
@@ -343,6 +346,7 @@ Medium devices (640px and larger)
   nav {
     width: auto;
     float: right;
+    padding-top: 16px;
   }
 
   nav > ul > li {
@@ -405,8 +409,8 @@ Large devices (1024px or larger)
   }
 
   .about_headshot {
-    width: 55%;
-    float: right;
-    padding-left: 20px;
+    width: 100%;
+    float: left;
+    padding-bottom: 20px;
 }
 }
